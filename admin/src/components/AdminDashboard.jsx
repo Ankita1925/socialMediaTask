@@ -11,7 +11,7 @@ const UserCardDashboard = () => {
   // Fetch all users on component mount
   useEffect(() => {
     axios
-      .get('http://localhost:5000/api/users/submissions') // Replace with your API endpoint
+      .get('https://socialmediatask-9qma.onrender.com/api/users/submissions') // Replace with your API endpoint
       .then((response) => {
         setUsers(response.data);
       })
@@ -56,7 +56,7 @@ const UserCardDashboard = () => {
           {users.map((user) => (
             <div className="user-card" key={user._id}>
               <img
-                src={`http://localhost:5000/${user.images[0]}`}
+                src={`https://socialmediatask-9qma.onrender.com/${user.images[0]}`}
                 alt="User Thumbnail"
                 className="card-image"
                 onClick={() => handleViewProfile(user)}
@@ -79,12 +79,12 @@ const UserCardDashboard = () => {
                 {selectedUser.images.map((image, index) => (
                   <div key={index} className="image-wrapper">
                     <img
-                      src={`http://localhost:5000/${image}`}
+                      src={`https://socialmediatask-9qma.onrender.com/${image}`}
                       alt={`User Image ${index + 1}`}
                       className="modal-image"
                     />
                     <a
-                      href={`http://localhost:5000/${image}`} // Image URL
+                      href={`https://socialmediatask-9qma.onrender.com/${image}`} // Image URL
                       download={`User_Image_${index + 1}`} // Image file name for download
                       className="download-icon"
                     >
