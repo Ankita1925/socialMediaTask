@@ -28,7 +28,7 @@ const FileUploadForm = () => {
 
         try {
             // Make POST request to the backend
-            const response = await axios.post('http://localhost:5000/api/users/submit', formData, {
+            const response = await axios.post('https://socialmediatask-9qma.onrender.com/api/users/submit', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
