@@ -19,7 +19,7 @@ const AdminLoginForm = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:5000/api/admin/login", { username, password });
+      const response = await axios.post("https://socialmediatask-9qma.onrender.com/api/admin/login", { username, password });
       const { token } = response.data;
 
       // Store token in localStorage or state for later use (for example, in a Redux store)
