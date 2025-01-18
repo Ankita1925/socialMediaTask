@@ -48,7 +48,7 @@ const ensureUploadsDirectory = (req, res, next) => {
 router.post(
     '/submit',
     ensureUploadsDirectory,
-    upload.array('images', 10), // Limit to 10 files
+    upload.array('images', 12), // Limit to 10 files
     wrapAsync(async (req, res, next) => {
         const { name, socialMediaHandle } = req.body;
 
