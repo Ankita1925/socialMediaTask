@@ -1,0 +1,207 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Dashboard container */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+
+}
+
+/* Top Navigation Bar */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  width: 100%;
+  /* Ensure full-width */
+  box-sizing: border-box;
+  /* Include padding in width calculation */
+}
+
+nav .logo h2 {
+  margin: 0;
+  font-size: 28px;
+  /* Slightly larger font size */
+}
+
+nav .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  /* Increase spacing between links */
+  margin: 0;
+  padding: 0;
+}
+
+nav .nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  /* Larger font size */
+  font-weight: 600;
+}
+
+/* Card Container */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* Always display 3 cards per row */
+  gap: 30px;
+  /* Spacing between cards */
+  padding: 20px;
+  width: 100%;
+  /* Ensure full width */
+  box-sizing: border-box;
+  /* Include padding in width calculation */
+  justify-content: center;
+  /* Center the cards */
+}
+
+/* User Card */
+.user-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  /* Allow card to use full allocated space */
+}
+
+.user-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  width: 100%;
+  height: 300px;
+  /* Larger image height */
+  object-fit: cover;
+}
+
+.card-details {
+  padding: 20px;
+  /* Increased padding for better spacing */
+  text-align: center;
+}
+
+.card-details h3 {
+  font-size: 20px;
+  /* Larger text */
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card-details p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Modal Styles */
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: linear-gradient(135deg, #bfdef7, #89eef1);
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #333;
+}
+
+.modal-content p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Modal Styles */
+.modal-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* Default to 3 images per row */
+  gap: 10px;
+  justify-content: center;
+}
+
+.modal-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.close-button {
+  background: linear-gradient(90deg, #ff6b6b, #ff8e53);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.close-button:hover {
+  background: linear-gradient(90deg, #ff8e53, #ff6b6b);
+  transform: scale(1.05);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+    /* Show 2 cards per row */
+  }
+
+  .modal-images {
+    grid-template-columns: repeat(2, 1fr);
+    /* Show 2 images per row */
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-container {
+    grid-template-columns: 1fr;
+    /* Show 1 card per row */
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+}
