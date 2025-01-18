@@ -67,7 +67,7 @@ const FileUploadForm = () => {
                     />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="images">Upload Images (max 10):</label>
+                    <label htmlFor="images">Upload Images (max 12):</label>
                     <input
                         type="file"
                         id="images"
